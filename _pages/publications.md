@@ -6,4 +6,14 @@ nav: true
 nav_order: 2
 ---
 
-Below are selected essays and writing. Formal publications can be added via BibTeX entries in `_bibliography/papers.bib`.
+<!-- _pages/publications.md -->
+
+<!-- Bibsearch Feature -->
+
+{% include bib_search.liquid %}
+
+<div class="publications">
+
+{% bibliography %}
+
+</div>

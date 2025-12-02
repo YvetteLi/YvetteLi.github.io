@@ -2,5 +2,10 @@
 github_users:
   - YvetteLi
 
-# Optionally list specific repos to feature
-github_repos: []
+repo_description_lines_max: 2
+
+github_repos:
+  - YvetteLi/icalm-project
+  - YvetteLi/COVID19-Progression-Prediction
+  - YvetteLi/Graph-Attention-Networks-Reproducibility-Report
+  - YvetteLi/Emotion-Classification-from-3-turn-Conversion-Data-with-Attention
