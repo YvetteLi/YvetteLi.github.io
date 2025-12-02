@@ -3,17 +3,21 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+first_name: Yufu
+middle_name: 
+last_name: Li
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Best way to reach me is email (yufu@chironbota.co). If it's about advising or collaboration,
+  please include a short note on fit; I’m in Pacific Time (PT).
+description: > # short, search-friendly summary
+  Prospective PhD student focused on graph learning and explainable AI for intelligent tutoring—
+  designing learner-facing explanations that support self-regulated learning and equitable access.
+  Current interests: explanation robustness (e.g., deletion curves, counterfactuals), user-centered
+  rationale/alt-text, and graph-based SRL tooling.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  © 2025 Yufu Li · Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with
+  <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted by
+  <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
