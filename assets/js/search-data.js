@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "post-your-ai-needs-a-dimmer-switch-not-an-on-off-button",
+        },{id: "post-hello",
+        
+          title: "Hello",
+        
+        description: "Test local post.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/hello/";
+          
+        },
+      },{id: "post-your-ai-needs-a-dimmer-switch-not-an-on-off-button",
         
           title: 'Your AI Needs a Dimmer Switch, Not an On/Off Button <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
