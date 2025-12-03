@@ -1,0 +1,35 @@
+{%- comment -%}
+  Featured post card for the grid.
+  Usage: {% include blog/featured_card.liquid post=post %}
+{%- endcomment -%}
+
+{%- assign p = include.post -%}
+<div class="col mb-4">
+  <a href="{{ p.url | relative_url }}">
+    <div class="card hoverable">
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <div class="float-right"><i class="fa-solid fa-thumbtack fa-xs"></i></div>
+            <h3 class="card-title text-lowercase">{{ p.title }}</h3>
+            {%- if p.description -%}<p class="card-text">{{ p.description }}</p>{%- endif -%}
+
+            {%- if p.external_source == blank -%}
+              {%- assign read_time = p.content | number_of_words | divided_by: 180 | plus: 1 -%}
+            {%- else -%}
+              {%- assign read_time = p.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 -%}
+            {%- endif -%}
+            {%- assign year = p.date | date: "%Y" -%}
+
+            <p class="post-meta">
+              {{ read_time }} min read &nbsp; &middot; &nbsp;
+              <a href="{{ year | prepend: '/blog/' | relative_url }}">
+                <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

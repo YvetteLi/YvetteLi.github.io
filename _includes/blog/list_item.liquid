@@ -1,0 +1,72 @@
+{%- comment -%}
+  Renders one post item in the blog list.
+  Usage: {% include blog/list_item.liquid post=post %}
+{%- endcomment -%}
+
+{%- assign p = include.post -%}
+{%- if p.external_source == blank -%}
+  {%- assign read_time = p.content | number_of_words | divided_by: 180 | plus: 1 -%}
+{%- else -%}
+  {%- assign read_time = p.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 -%}
+{%- endif -%}
+{%- assign year = p.date | date: "%Y" -%}
+{%- assign tags = p.tags | join: "" -%}
+{%- assign categories = p.categories | join: "" -%}
+
+<li>
+  {%- if p.thumbnail -%}<div class="row"><div class="col-sm-9">{%- endif -%}
+
+  <h3>
+    {%- if p.redirect == blank -%}
+      <a class="post-title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    {%- elsif p.redirect contains '://' -%}
+      <a class="post-title" href="{{ p.redirect }}" target="_blank" rel="noopener">{{ p.title }}</a>
+      <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+              class="icon_svg-stroke" stroke="#999" stroke-width="1.5"
+              fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    {%- else -%}
+      <a class="post-title" href="{{ p.redirect | relative_url }}">{{ p.title }}</a>
+    {%- endif -%}
+  </h3>
+
+  {%- if p.description -%}
+    <p>{{ p.description }}</p>
+  {%- endif -%}
+
+  <p class="post-meta">
+    {{ read_time }} min read &nbsp; &middot; &nbsp; {{ p.date | date: '%B %d, %Y' }}
+    {%- if p.external_source -%} &nbsp; &middot; &nbsp; {{ p.external_source }}{%- endif -%}
+  </p>
+
+  <p class="post-tags">
+    <a href="{{ year | prepend: '/blog/' | relative_url }}">
+      <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+    </a>
+
+    {%- if tags != "" -%}
+      &nbsp; &middot; &nbsp;
+      {%- for tag in p.tags -%}
+        <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
+          <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if categories != "" -%}
+      &nbsp; &middot; &nbsp;
+      {%- for cat in p.categories -%}
+        <a href="{{ cat | slugify | prepend: '/blog/category/' | relative_url }}">
+          <i class="fa-solid fa-tag fa-sm"></i> {{ cat }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+      {%- endfor -%}
+    {%- endif -%}
+  </p>
+
+  {%- if p.thumbnail -%}
+    </div>
+    <div class="col-sm-3">
+      <img class="card-img" src="{{ p.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+    </div>
+  </div>
+  {%- endif -%}
+</li>
