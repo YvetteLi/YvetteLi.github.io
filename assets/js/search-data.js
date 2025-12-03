@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
         },{id: "nav-publications",
           title: "publications",
           description: "",
@@ -37,7 +30,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "projects-stochastic-sir-seir-modeling",
+        },{id: "post-your-ai-needs-a-dimmer-switch-not-an-on-off-button",
+        
+          title: 'Your AI Needs a Dimmer Switch, Not an On/Off Button <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@yvetteli/your-ai-needs-a-dimmer-switch-not-an-on-off-button-0134c9101f27?source=rss-a75799f2fc72------2", "_blank");
+          
+        },
+      },{id: "post-your-gps-shows-you-the-turns-why-doesn-t-your-ai",
+        
+          title: 'Your GPS Shows You the Turns. Why Doesn’t Your AI? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@yvetteli/your-gps-shows-you-the-turns-why-doesnt-your-ai-056df54e4b5b?source=rss-a75799f2fc72------2", "_blank");
+          
+        },
+      },{id: "post-when-ai-explains-everything-do-we-still-need-concept-maps",
+        
+          title: 'When AI Explains Everything, Do We Still Need Concept Maps? <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@yvetteli/when-ai-explains-everything-do-we-still-need-concept-maps-024f63188def?source=rss-a75799f2fc72------2", "_blank");
+          
+        },
+      },{id: "projects-stochastic-sir-seir-modeling",
           title: 'Stochastic SIR/SEIR Modeling',
           description: "Stochastic SEIR with data‑augmentation MCMC to capture latent trajectories and uncertainty beyond deterministic ODEs.",
           section: "Projects",handler: () => {
