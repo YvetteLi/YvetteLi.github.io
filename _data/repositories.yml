@@ -1,11 +1,23 @@
-# Add your GitHub username to show repos & trophies
+# _data/repositories.yml
 github_users:
   - YvetteLi
 
 repo_description_lines_max: 2
 
 github_repos:
-  - YvetteLi/icalm-project
-  - YvetteLi/COVID19-Progression-Prediction
-  - YvetteLi/Graph-Attention-Networks-Reproducibility-Report
-  - YvetteLi/Emotion-Classification-from-3-turn-Conversion-Data-with-Attention
+  - owner: YvetteLi
+    repo: icalm-project
+    image: /assets/img/cover-icalm.jpg
+
+  - owner: YvetteLi
+    repo: COVID19-Progression-Prediction
+    image: /assets/img/cover-seir.jpg
+
+  - owner: YvetteLi
+    repo: Graph-Attention-Networks-Reproducibility-Report
+    image: /assets/img/cover-gat.jpg
+
+  - owner: YvetteLi
+    # if your repo name is “Conversation” (not “Conversion”), use that exact spelling:
+    repo: Emotion-Classification-from-3-turn-Conversation-Data-with-Attention
+    image: /assets/img/cover-nlp.jpg

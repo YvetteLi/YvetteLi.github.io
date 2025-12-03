@@ -32,3 +32,9 @@
     >
   </a>
 </div>
+
+{% capture avatar %}https://avatars.githubusercontent.com/{{ include.username }}?s=64{% endcapture %}
+<a class="repo-user d-flex align-items-center" href="https://github.com/{{ include.username }}" target="_blank" rel="noopener">
+  <img src="{{ avatar }}" width="24" height="24" alt="{{ include.username }} avatar" class="me-2 rounded-circle">
+  {{ include.username }}
+</a>
